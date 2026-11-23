@@ -1,8 +1,8 @@
-# Earlybird: a free lead radar skill for Claude
+# Earlybird: a free lead radar skill for AI assistants
 
 Earlybird finds B2B leads at the moment they are most likely to buy: startups that just launched, just raised, just posted their first sales role, and people publicly asking for a tool like yours. Every lead comes with the reason ("why now") and the source link.
 
-It runs inside your own Claude. No server, no account, no cost beyond your Claude plan.
+It runs inside the AI assistant you already use: Claude, ChatGPT, Codex or any tool that supports the open Agent Skills format (a folder with a `SKILL.md`). No server, no account, no cost beyond your assistant's plan.
 
 ## What you get
 
@@ -13,15 +13,21 @@ It runs inside your own Claude. No server, no account, no cost beyond your Claud
 
 ## Install
 
-**Claude (web and desktop):** download this folder as a ZIP and upload it as a skill in Claude's settings (look for Skills under Settings, Capabilities or Customize; the menu name can change). Code execution must be enabled for the collector script; without it Earlybird falls back to web search.
+| Tool | How |
+| --- | --- |
+| **Claude** (web and desktop) | Download this repo as a ZIP and upload it as a skill in Claude's settings. Turn on code execution so the collector script can run. |
+| **ChatGPT** | Download the ZIP and upload it under Skills (Create, then Upload from your computer). Availability of Skills depends on your plan and workspace settings. |
+| **Claude Code** | Copy the folder to `~/.claude/skills/earlybird`. |
+| **Codex and other agents** | Copy the folder into the tool's skills directory (see its docs for the Agent Skills format). |
+| **Anything else** | Paste `SKILL.md` into a project's or custom assistant's instructions and add the `references` files as knowledge. Without code execution it runs in web-search mode. |
 
-**Claude Code:** copy the `earlybird` folder to `~/.claude/skills/earlybird`.
+Menu names change often; if you can't find Skills, search your assistant's help for "skills".
 
 ## First run
 
-Say: **"Set up my Earlybird radar."** Claude asks what you sell, who buys it and which competitors your buyers use, and saves `radar-profile.json`. Then: **"Run my radar for the last 14 days."**
+Say: **"Set up my Earlybird radar."** The assistant asks what you sell, who buys it and which competitors your buyers use, and saves `radar-profile.json`. Then: **"Run my radar for the last 14 days."**
 
-For a weekly report, ask Claude to schedule it: "Every Monday at 8:00, run my Earlybird radar for the last 7 days."
+For a weekly report, ask your assistant to schedule it, if it supports scheduled tasks: "Every Monday at 8:00, run my Earlybird radar for the last 7 days."
 
 ## Optional keys
 
@@ -33,7 +39,7 @@ For a weekly report, ask Claude to schedule it: "Every Monday at 8:00, run my Ea
 
 ## Outreach
 
-Earlybird has no LinkedIn data and never contacts anyone. If you have an outreach, LinkedIn or CRM connector in Claude, Earlybird can hand leads to it with the "why now" context, after you approve each step.
+Earlybird has no LinkedIn data and never contacts anyone. If you have an outreach, LinkedIn or CRM connector in your assistant, Earlybird can hand leads to it with the "why now" context, after you approve each step.
 
 ## Run the collector yourself
 

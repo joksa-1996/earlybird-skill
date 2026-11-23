@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Earlybird collector: free public signals about new startups, merged per company and scored.
 
-Standard library only, so it runs anywhere Python 3.9+ runs (Claude code execution, Claude Code,
-Cowork, a laptop, GitHub Actions). Every source is optional; a source that fails is reported and
-skipped, so Claude can fall back to web search for it.
+Standard library only, so it runs anywhere Python 3.9+ runs (an AI assistant's code sandbox, a coding
+agent, a laptop, GitHub Actions). Every source is optional; a source that fails is reported and
+skipped, so the assistant can fall back to web search for it.
 
 Usage:
   python collect.py collect --profile radar-profile.json --days 7 --out signals.json

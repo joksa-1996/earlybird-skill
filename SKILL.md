@@ -14,7 +14,7 @@ The user's own instructions always win over this file.
 Everything depends on `radar-profile.json`. Look for it in this order: the current project or working folder, then the conversation. If it does not exist, create it with the user (see `references/profile.md` for the format and questions). Ask at most 3 short questions at a time. Show a one-paragraph summary and save only after the user confirms.
 
 Where to save it:
-- With a file system (Claude Code, Cowork, a project folder): write `radar-profile.json` next to the reports.
+- With a file system (a coding agent, a desktop app with folder access, a project folder): write `radar-profile.json` next to the reports.
 - In a chat without files: give the user the JSON in a code block and ask them to add it to the project's knowledge or paste it next time.
 
 ## 2. Collect signals
