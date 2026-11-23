@@ -1,0 +1,21 @@
+{
+  "icp": "Early-stage B2B SaaS startups (pre-seed to Series A), 2-20 people, founders still doing sales, no sales team yet.",
+  "countries": ["US", "CA", "GB"],
+  "company_size_max": 20,
+  "exclude": ["consumer apps", "crypto tokens", "funds", "agencies", "freelancers"],
+  "contact_email": "",
+  "sources": ["hn", "hn_intent", "hn_hiring", "yc", "github", "sec_formd"],
+  "offers": [
+    {
+      "key": "main",
+      "label": "Your product",
+      "pitch": "One sentence: what you sell and to whom.",
+      "competitors": ["competitor one", "competitor two"],
+      "pain_phrases": ["first customers", "founder led sales"],
+      "max_team": 20,
+      "max_raise": 15000000,
+      "weights": {}
+    }
+  ],
+  "seen": []
+}

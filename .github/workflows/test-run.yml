@@ -1,0 +1,49 @@
+name: test-run
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Days to look back"
+        default: "7"
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect signals with the example profile
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EARLYBIRD_CONTACT_EMAIL: ${{ secrets.EARLYBIRD_CONTACT_EMAIL }}
+        run: |
+          python scripts/collect.py collect --profile tests/test-profile.json \
+            --days "${{ github.event.inputs.days || '7' }}" --out signals.json
+      - name: Summary
+        run: |
+          python - <<'PY'
+          import json
+          d = json.load(open("signals.json"))
+          lines = ["## Source status", ""] + [f"- **{k}**: {v}" for k, v in d["source_status"].items()]
+          lines += ["", "## Top 15", "", "| Company | Score | Why now |", "| --- | --- | --- |"]
+          for c in d["companies"][:15]:
+              why = next(iter(c["offers"].values()))["why_now"][:1]
+              lines.append(f"| {c['name']} | {c['best_score']} | {(why[0] if why else '')[:140].replace('|', '/')} |")
+          lines += ["", "## Intent and hiring signals", ""]
+          for c in d["companies"]:
+              for s in c["signals"]:
+                  if s["kind"] in ("intent", "sales_hiring"):
+                      lines.append(f"- **{s['title']}** ({s['source']}, {s['extra'].get('intent_topics')}): {s['description'][:260]} {s['url']}")
+          text = "\n".join(lines)
+          print(text)
+          open(__import__("os").environ["GITHUB_STEP_SUMMARY"], "a").write(text)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: signals
+          path: signals.json

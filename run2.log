@@ -1,0 +1,261 @@
+﻿2026-11-23T11:25:51.4072751Z Current runner version: '2.338.2'
+2026-11-23T11:25:51.4099851Z ##[group]Runner Image Provisioner
+2026-11-23T11:25:51.4100758Z Hosted Compute Agent
+2026-11-23T11:25:51.4101331Z Version: 20261111.635
+2026-11-23T11:25:51.4102133Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-23T11:25:51.4102859Z Build Date: 2026-11-11T01:49:01Z
+2026-11-23T11:25:51.4103590Z Worker ID: {e0c65367-1518-4473-b82a-18e3361383c4}
+2026-11-23T11:25:51.4104295Z Region: eastus
+2026-11-23T11:25:51.4104858Z Cloud: Azure
+2026-11-23T11:25:51.4105442Z ##[endgroup]
+2026-11-23T11:25:51.4107239Z ##[group]Operating System
+2026-11-23T11:25:51.4108076Z Ubuntu
+2026-11-23T11:25:51.4108599Z 26.04.1
+2026-11-23T11:25:51.4109147Z LTS
+2026-11-23T11:25:51.4109745Z ##[endgroup]
+2026-11-23T11:25:51.4110285Z ##[group]Runner Image
+2026-11-23T11:25:51.4110960Z Image: ubuntu-26.04
+2026-11-23T11:25:51.4111521Z Version: 20261116.202.1
+2026-11-23T11:25:51.4113484Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.202/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-23T11:25:51.4115090Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.202
+2026-11-23T11:25:51.4116063Z ##[endgroup]
+2026-11-23T11:25:51.4117576Z ##[group]GITHUB_TOKEN Permissions
+2026-11-23T11:25:51.4119834Z Contents: read
+2026-11-23T11:25:51.4120437Z Metadata: read
+2026-11-23T11:25:51.4121088Z ##[endgroup]
+2026-11-23T11:25:51.4123208Z Secret source: Actions
+2026-11-23T11:25:51.4124296Z Cache mode: write
+2026-11-23T11:25:51.4125264Z Prepare workflow directory
+2026-11-23T11:25:51.4466258Z Prepare all required actions
+2026-11-23T11:25:51.4516153Z Getting action download info
+2026-11-23T11:25:51.6538116Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-23T11:25:51.7559007Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-23T11:25:51.8152641Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-23T11:25:52.0682780Z Complete job name: radar
+2026-11-23T11:25:52.1624875Z ##[group]Run actions/checkout@v4
+2026-11-23T11:25:52.1625800Z with:
+2026-11-23T11:25:52.1626265Z   repository: joksa-1996/earlybird-skill
+2026-11-23T11:25:52.1630237Z   token: ***
+2026-11-23T11:25:52.1630684Z   ssh-strict: true
+2026-11-23T11:25:52.1631136Z   ssh-user: git
+2026-11-23T11:25:52.1631627Z   persist-credentials: true
+2026-11-23T11:25:52.1632129Z   clean: true
+2026-11-23T11:25:52.1632582Z   sparse-checkout-cone-mode: true
+2026-11-23T11:25:52.1633117Z   fetch-depth: 1
+2026-11-23T11:25:52.1633551Z   fetch-tags: false
+2026-11-23T11:25:52.1633997Z   show-progress: true
+2026-11-23T11:25:52.1634445Z   lfs: false
+2026-11-23T11:25:52.1635012Z   submodules: false
+2026-11-23T11:25:52.1635479Z   set-safe-directory: true
+2026-11-23T11:25:52.1635994Z   allow-unsafe-pr-checkout: false
+2026-11-23T11:25:52.1637662Z ##[endgroup]
+2026-11-23T11:25:52.5094084Z Syncing repository: joksa-1996/earlybird-skill
+2026-11-23T11:25:52.5097778Z ##[group]Getting Git version info
+2026-11-23T11:25:52.5099540Z Working directory is '/home/runner/work/earlybird-skill/earlybird-skill'
+2026-11-23T11:25:52.5101941Z [command]/usr/bin/git version
+2026-11-23T11:25:52.5148644Z git version 2.56.1
+2026-11-23T11:25:52.5176613Z ##[endgroup]
+2026-11-23T11:25:52.5192692Z Temporarily overriding HOME='/home/runner/work/_temp/e1ea534c-b856-485c-9298-954206fb3fbb' before making global git config changes
+2026-11-23T11:25:52.5207896Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-23T11:25:52.5211547Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/earlybird-skill/earlybird-skill
+2026-11-23T11:25:52.5318666Z Deleting the contents of '/home/runner/work/earlybird-skill/earlybird-skill'
+2026-11-23T11:25:52.5322533Z ##[group]Initializing the repository
+2026-11-23T11:25:52.5324433Z [command]/usr/bin/git init /home/runner/work/earlybird-skill/earlybird-skill
+2026-11-23T11:25:52.5446203Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-23T11:25:52.5449053Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-23T11:25:52.5450895Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-23T11:25:52.5452362Z hint: call:
+2026-11-23T11:25:52.5453147Z hint:
+2026-11-23T11:25:52.5454121Z hint: 	git config --global init.defaultBranch <name>
+2026-11-23T11:25:52.5455310Z hint:
+2026-11-23T11:25:52.5456434Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-23T11:25:52.5458452Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-23T11:25:52.5459976Z hint:
+2026-11-23T11:25:52.5461168Z hint: 	git branch -m <name>
+2026-11-23T11:25:52.5462576Z hint:
+2026-11-23T11:25:52.5464265Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-23T11:25:52.5466446Z Initialized empty Git repository in /home/runner/work/earlybird-skill/earlybird-skill/.git/
+2026-11-23T11:25:52.5474081Z [command]/usr/bin/git remote add origin https://github.com/joksa-1996/earlybird-skill
+2026-11-23T11:25:52.5540731Z ##[endgroup]
+2026-11-23T11:25:52.5542130Z ##[group]Disabling automatic garbage collection
+2026-11-23T11:25:52.5544009Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-23T11:25:52.5598849Z ##[endgroup]
+2026-11-23T11:25:52.5600717Z ##[group]Setting up auth
+2026-11-23T11:25:52.5605569Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-23T11:25:52.5641150Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-23T11:25:52.6195708Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-23T11:25:52.6234713Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-23T11:25:52.6525183Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-23T11:25:52.6564406Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-23T11:25:52.6851775Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-23T11:25:52.6894606Z ##[endgroup]
+2026-11-23T11:25:52.6896164Z ##[group]Fetching the repository
+2026-11-23T11:25:52.6905646Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7041dfdfd85733838587d504519f1372de62e61a:refs/remotes/origin/main
+2026-11-23T11:25:52.9088937Z From https://github.com/joksa-1996/earlybird-skill
+2026-11-23T11:25:52.9090552Z  * [new ref]         7041dfdfd85733838587d504519f1372de62e61a -> origin/main
+2026-11-23T11:25:52.9094370Z ##[endgroup]
+2026-11-23T11:25:52.9095705Z ##[group]Determining the checkout info
+2026-11-23T11:25:52.9097568Z ##[endgroup]
+2026-11-23T11:25:52.9104333Z [command]/usr/bin/git sparse-checkout disable
+2026-11-23T11:25:52.9166505Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-23T11:25:52.9199405Z ##[group]Checking out the ref
+2026-11-23T11:25:52.9203479Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-23T11:25:52.9318060Z Switched to a new branch 'main'
+2026-11-23T11:25:52.9324625Z branch 'main' set up to track 'origin/main'.
+2026-11-23T11:25:52.9332023Z ##[endgroup]
+2026-11-23T11:25:52.9383602Z [command]/usr/bin/git log -1 --format=%H
+2026-11-23T11:25:52.9412511Z 7041dfdfd85733838587d504519f1372de62e61a
+2026-11-23T11:25:52.9844705Z ##[group]Run actions/setup-python@v5
+2026-11-23T11:25:52.9846007Z with:
+2026-11-23T11:25:52.9847121Z   python-version: 3.12
+2026-11-23T11:25:52.9848216Z   check-latest: false
+2026-11-23T11:25:52.9858629Z   token: ***
+2026-11-23T11:25:52.9859628Z   update-environment: true
+2026-11-23T11:25:52.9860789Z   allow-prereleases: false
+2026-11-23T11:25:52.9861906Z   freethreaded: false
+2026-11-23T11:25:52.9862922Z ##[endgroup]
+2026-11-23T11:25:53.1389797Z ##[group]Installed versions
+2026-11-23T11:25:53.1529566Z (node:2421) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-23T11:25:53.1535376Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-23T11:25:53.1550461Z Successfully set up CPython (3.12.16)
+2026-11-23T11:25:53.1553644Z ##[endgroup]
+2026-11-23T11:25:53.1910771Z ##[group]Run python scripts/collect.py collect --profile tests/test-profile.json \
+2026-11-23T11:25:53.1913404Z [36;1mpython scripts/collect.py collect --profile tests/test-profile.json \[0m
+2026-11-23T11:25:53.1915314Z [36;1m  --days "7" --out signals.json[0m
+2026-11-23T11:25:53.2055699Z shell: /usr/bin/bash -e {0}
+2026-11-23T11:25:53.2057056Z env:
+2026-11-23T11:25:53.2058225Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-23T11:25:53.2060592Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-23T11:25:53.2064148Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-23T11:25:53.2065933Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-23T11:25:53.2067830Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-23T11:25:53.2069602Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-23T11:25:53.2082484Z   GITHUB_TOKEN: ***
+2026-11-23T11:25:53.2083871Z   EARLYBIRD_CONTACT_EMAIL: 
+2026-11-23T11:25:53.2085470Z ##[endgroup]
+2026-11-23T11:25:57.7448027Z hn: ok (123)
+2026-11-23T11:26:00.9760788Z hn_intent: ok (1)
+2026-11-23T11:26:01.7744968Z hn_hiring: ok (207)
+2026-11-23T11:26:01.9426279Z yc: ok (7)
+2026-11-23T11:26:13.3401037Z github: ok (211)
+2026-11-23T11:26:13.3402479Z sec_formd: failed: RuntimeError: needs contact_email in the profile (SEC requires a contact in the User-Agent)
+2026-11-23T11:26:13.3511210Z 72 companies scored, top 60 written to signals.json
+2026-11-23T11:26:13.3691527Z ##[group]Run python - <<'PY'
+2026-11-23T11:26:13.3691904Z [36;1mpython - <<'PY'[0m
+2026-11-23T11:26:13.3692153Z [36;1mimport json[0m
+2026-11-23T11:26:13.3692411Z [36;1md = json.load(open("signals.json"))[0m
+2026-11-23T11:26:13.3692873Z [36;1mlines = ["## Source status", ""] + [f"- **{k}**: {v}" for k, v in d["source_status"].items()][0m
+2026-11-23T11:26:13.3693430Z [36;1mlines += ["", "## Top 15", "", "| Company | Score | Why now |", "| --- | --- | --- |"][0m
+2026-11-23T11:26:13.3693854Z [36;1mfor c in d["companies"][:15]:[0m
+2026-11-23T11:26:13.3694207Z [36;1m    why = next(iter(c["offers"].values()))["why_now"][:1][0m
+2026-11-23T11:26:13.3694785Z [36;1m    lines.append(f"| {c['name']} | {c['best_score']} | {(why[0] if why else '')[:140].replace('|', '/')} |")[0m
+2026-11-23T11:26:13.3695314Z [36;1mlines += ["", "## Intent and hiring signals", ""][0m
+2026-11-23T11:26:13.3695674Z [36;1mfor c in d["companies"]:[0m
+2026-11-23T11:26:13.3695975Z [36;1m    for s in c["signals"]:[0m
+2026-11-23T11:26:13.3696301Z [36;1m        if s["kind"] in ("intent", "sales_hiring"):[0m
+2026-11-23T11:26:13.3697174Z [36;1m            lines.append(f"- **{s['title']}** ({s['source']}, {s['extra'].get('intent_topics')}): {s['description'][:260]} {s['url']}")[0m
+2026-11-23T11:26:13.3697728Z [36;1mtext = "\n".join(lines)[0m
+2026-11-23T11:26:13.3697985Z [36;1mprint(text)[0m
+2026-11-23T11:26:13.3698339Z [36;1mopen(__import__("os").environ["GITHUB_STEP_SUMMARY"], "a").write(text)[0m
+2026-11-23T11:26:13.3698724Z [36;1mPY[0m
+2026-11-23T11:26:13.3734702Z shell: /usr/bin/bash -e {0}
+2026-11-23T11:26:13.3734983Z env:
+2026-11-23T11:26:13.3735264Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-23T11:26:13.3735737Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-23T11:26:13.3736217Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-23T11:26:13.3737138Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-23T11:26:13.3737573Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-23T11:26:13.3737976Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-23T11:26:13.3738341Z ##[endgroup]
+2026-11-23T11:26:13.3995581Z ## Source status
+2026-11-23T11:26:13.3995955Z 
+2026-11-23T11:26:13.3996115Z - **hn**: ok (123)
+2026-11-23T11:26:13.3996546Z - **hn_intent**: ok (1)
+2026-11-23T11:26:13.3997156Z - **hn_hiring**: ok (207)
+2026-11-23T11:26:13.3997580Z - **yc**: ok (7)
+2026-11-23T11:26:13.3997947Z - **github**: ok (211)
+2026-11-23T11:26:13.3998876Z - **sec_formd**: failed: RuntimeError: needs contact_email in the profile (SEC requires a contact in the User-Agent)
+2026-11-23T11:26:13.3999747Z 
+2026-11-23T11:26:13.3999943Z ## Top 15
+2026-11-23T11:26:13.4000147Z 
+2026-11-23T11:26:13.4000337Z | Company | Score | Why now |
+2026-11-23T11:26:13.4000781Z | --- | --- | --- |
+2026-11-23T11:26:13.4002029Z | Jackobrien | 9.0 | competitor: HN comment (Interviewed at a YC startup, found out they used my LinkedIn without permission): I mean this clearly feels like a s |
+2026-11-23T11:26:13.4004240Z | Zero C# | 4.11 | launch: Show HN: Zero C# – C# without a runtime or GC (hn, 2026-11-21) https://news.ycombinator.com/item?id=50590279 |
+2026-11-23T11:26:13.4006262Z | Cornhole News | 3.72 | launch: Show HN: Cornhole News – A Hacker News inspired site for news across the Midwest (hn, 2026-11-19) https://news.ycombinator.com/item? |
+2026-11-23T11:26:13.4008419Z | Fast | 3.72 | launch: Show HN: Fast deterministic natural language search for OpenStreetMap data (hn, 2026-11-19) https://news.ycombinator.com/item?id=505 |
+2026-11-23T11:26:13.4010503Z | Foolscap | 3.71 | launch: Show HN: Foolscap – a writing app that reads your book and never writes for you (hn, 2026-11-19) https://news.ycombinator.com/item?i |
+2026-11-23T11:26:13.4012339Z | Opsis | 3.59 | accelerator: YC Winter 2027: Autocomplete everywhere that knows your work (yc, 2026-11-21) https://www.ycombinator.com/companies/opsis |
+2026-11-23T11:26:13.4014624Z | Take Voyager 1 apart | 3.55 | launch: Show HN: Take Voyager 1 apart, down to a single memory chip (hn, 2026-11-18) https://news.ycombinator.com/item?id=50548161 |
+2026-11-23T11:26:13.4016292Z | Type Fighter 2 | 3.51 | launch: Show HN: Type Fighter 2 (hn, 2026-11-18) https://news.ycombinator.com/item?id=50544821 |
+2026-11-23T11:26:13.4018110Z | Tinnitus | 3.46 | launch: Show HN: Tinnitus frequency finder and audio notch tool (hn, 2026-11-18) https://news.ycombinator.com/item?id=50541568 |
+2026-11-23T11:26:13.4020040Z | Rook Space | 3.38 | accelerator: YC Winter 2027: Unlocking fast laser downlink for satellites (yc, 2026-11-20) https://www.ycombinator.com/companies/rook-space |
+2026-11-23T11:26:13.4021990Z | Alloy CSS | 3.37 | launch: Show HN: Alloy CSS, dialogs, menus and tabs that work with JavaScript off (hn, 2026-11-17) https://news.ycombinator.com/item?id=5053 |
+2026-11-23T11:26:13.4024002Z | Foreshadow Industries | 3.36 | accelerator: YC Fall 2026: Defense robotics built on AI models that reason over space and time (yc, 2026-11-19) https://www.ycombinator.com/ |
+2026-11-23T11:26:13.4025920Z | FluxCap | 3.34 | accelerator: YC Spring 2026: FluxCap is Deep Legal Tech built to think like a lawyer (yc, 2026-11-19) https://www.ycombinator.com/companies/ |
+2026-11-23T11:26:13.4028263Z | Onlook | 3.32 | accelerator: Launch HN: Onlook (YC W25) – An open-source developer tool for designers (hn, 2026-11-19) https://news.ycombinator.com/item?id= |
+2026-11-23T11:26:13.4030000Z | I | 3.27 | launch: Show HN: I made an audio-to-MIDI model 60x more efficient (hn, 2026-11-17) https://news.ycombinator.com/item?id=50526023 |
+2026-11-23T11:26:13.4030870Z 
+2026-11-23T11:26:13.4031059Z ## Intent and hiring signals
+2026-11-23T11:26:13.4031353Z 
+2026-11-23T11:26:13.4033857Z - **Jackobrien** (hn_intent, ['competitor:outreach']): HN comment (Interviewed at a YC startup, found out they used my LinkedIn without permission): I mean this clearly feels like a simple mistake right? I’ve accidentally sent thing from the wrong account on lemlist before https://news.ycombinator.com/item?id=50542952
+2026-11-23T11:26:13.4037373Z - **AetherGrid** (hn_hiring, ['first_sales_hire']): AetherGrid | Founding GTM Lead | REMOTE (Worldwide) | Paid, Fractional / Contract https://news.ycombinator.com/item?id=50423766
+2026-11-23T11:26:13.4038805Z - **Apollo Research** (hn_hiring, ['first_sales_hire']): Apollo Research | Coding agent security product https://news.ycombinator.com/item?id=50357728
+2026-11-23T11:26:13.4040157Z - **Perry** (hn_hiring, ['first_sales_hire']): Perry | Founding Commercial Hire, Founding Account Executive (US), Product Designer, Legal Engineer | London (and New York for US AE) | ONSITE | Full-time https://news.ycombinator.com/item?id=50349660
+2026-11-23T11:26:13.4042210Z - **CreativeLens** (hn_hiring, ['first_sales_hire']): CreativeLens | Founding Growth & Sales Lead | Remote (US) | Full-time https://news.ycombinator.com/item?id=50342626
+2026-11-23T11:26:13.4043713Z - **REVNODE** (hn_hiring, ['first_sales_hire']): REVNODE | Founding Sales (Founding AE) | Remote (US) | Part-time or Full-time | 1099 https://news.ycombinator.com/item?id=50342365
+2026-11-23T11:26:13.4045040Z - **Fredrin** (hn_hiring, ['first_sales_hire']): Fredrin | GTM Engineer | REMOTE (US) | Full-time | $130k + equity | https://www.fredrin.com/careers/gtm-engineer?utm_source=hack... https://news.ycombinator.com/item?id=50341328
+2026-11-23T11:26:13.4046282Z - **Erica Holloway** (hn_hiring, []): Erica Holloway | Talent Sourcer @ Footprint | NYC & SF, USA (onsite) https://news.ycombinator.com/item?id=50456061
+2026-11-23T11:26:13.4047883Z - **Mastra** (hn_hiring, ['first_sales_hire']): Mastra | Founding Sales (Founding AE) | US Remote | Full-time https://news.ycombinator.com/item?id=50339514
+2026-11-23T11:26:13.4049555Z - **Evaboot** (hn_hiring, []): Evaboot | Agentic Python Engineer | REMOTE worldwide | Full-time | $60-120K USD/year https://news.ycombinator.com/item?id=50341833
+2026-11-23T11:26:13.4051034Z - **Charly** (hn_hiring, []): Charly | Sales / Account Executive GovTech | ONSITE Berlin, Germany | Full-time | Seed | Base+Variable https://news.ycombinator.com/item?id=50340113
+2026-11-23T11:26:13.4052285Z - **COi Rubber Products** (hn_hiring, []): COi Rubber Products | Independent Sales Representative | REMOTE (US) | Commission (1099) https://news.ycombinator.com/item?id=50377145
+2026-11-23T11:26:13.4147869Z ##[group]Run actions/upload-artifact@v4
+2026-11-23T11:26:13.4148228Z with:
+2026-11-23T11:26:13.4148443Z   name: signals
+2026-11-23T11:26:13.4148668Z   path: signals.json
+2026-11-23T11:26:13.4148915Z   if-no-files-found: warn
+2026-11-23T11:26:13.4149178Z   compression-level: 6
+2026-11-23T11:26:13.4149425Z   overwrite: false
+2026-11-23T11:26:13.4149659Z   include-hidden-files: false
+2026-11-23T11:26:13.4149907Z env:
+2026-11-23T11:26:13.4150178Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-23T11:26:13.4150636Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-23T11:26:13.4151103Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-23T11:26:13.4151510Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-23T11:26:13.4151918Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-23T11:26:13.4152335Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-23T11:26:13.4152709Z ##[endgroup]
+2026-11-23T11:26:13.5914206Z (node:2438) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-23T11:26:13.5915159Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-23T11:26:13.5992371Z With the provided path, there will be 1 file uploaded
+2026-11-23T11:26:13.5994842Z Artifact name is valid!
+2026-11-23T11:26:13.5997752Z Root directory input is valid!
+2026-11-23T11:26:13.9314705Z Beginning upload of artifact content to blob storage
+2026-11-23T11:26:13.9673478Z (node:2438) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-23T11:26:14.0135062Z Uploaded bytes 11300
+2026-11-23T11:26:14.0314527Z Finished uploading artifact content to blob storage!
+2026-11-23T11:26:14.0315554Z SHA256 digest of uploaded artifact zip is a279fb5fd819899930c33b328d7cf9069624bf1ae2eff31db047618a36b0c105
+2026-11-23T11:26:14.0317360Z Finalizing artifact upload
+2026-11-23T11:26:14.3495426Z Artifact signals.zip successfully finalized. Artifact ID 14814171827
+2026-11-23T11:26:14.3496733Z Artifact signals has been successfully uploaded! Final size is 11300 bytes. Artifact ID is 14814171827
+2026-11-23T11:26:14.3498278Z Artifact download URL: https://github.com/joksa-1996/earlybird-skill/actions/runs/45165132107/artifacts/14814171827
+2026-11-23T11:26:14.3709472Z Post job cleanup.
+2026-11-23T11:26:14.4983779Z (node:2450) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-23T11:26:14.4984766Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-23T11:26:14.5224447Z Post job cleanup.
+2026-11-23T11:26:14.6168282Z [command]/usr/bin/git version
+2026-11-23T11:26:14.6217528Z git version 2.56.1
+2026-11-23T11:26:14.6263265Z Temporarily overriding HOME='/home/runner/work/_temp/854c8072-2093-4651-a886-470d5260a410' before making global git config changes
+2026-11-23T11:26:14.6265044Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-23T11:26:14.6269965Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/earlybird-skill/earlybird-skill
+2026-11-23T11:26:14.6317792Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-23T11:26:14.6376080Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-23T11:26:14.6722990Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-23T11:26:14.6801629Z http.https://github.com/.extraheader
+2026-11-23T11:26:14.6836413Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-23T11:26:14.6899620Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-23T11:26:14.7280271Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-23T11:26:14.7322632Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-23T11:26:14.7800681Z Cleaning up orphan processes
+2026-11-23T11:26:14.8199125Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

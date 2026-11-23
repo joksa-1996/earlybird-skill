@@ -1,0 +1,20 @@
+{
+  "icp": "Early-stage B2B SaaS startups (pre-seed to Series A), 2-20 people, founders still doing sales, no sales team yet. US, Canada, UK.",
+  "countries": ["US", "CA", "GB"],
+  "company_size_max": 20,
+  "exclude": ["consumer apps", "crypto tokens", "funds", "agencies"],
+  "contact_email": "",
+  "sources": ["hn", "hn_intent", "hn_hiring", "yc", "github", "sec_formd"],
+  "offers": [
+    {
+      "key": "outreach",
+      "label": "LinkedIn outreach tool",
+      "pitch": "LinkedIn outreach tool for founders who sell themselves.",
+      "competitors": ["gojiberry", "expandi", "waalaxy", "heyreach", "dripify", "lemlist", "phantombuster"],
+      "pain_phrases": ["linkedin outreach", "linkedin automation", "founder led sales", "first customers"],
+      "max_team": 20,
+      "max_raise": 15000000
+    }
+  ],
+  "seen": []
+}
