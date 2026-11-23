@@ -63,6 +63,14 @@ Rules:
 
 Earlybird has no LinkedIn data and never contacts anyone. If the user wants to act on leads and has an outreach, LinkedIn or CRM connector available, follow `references/outreach.md`. Ask before every step that writes anything.
 
-## Running it on a schedule
+## 7. Offer a schedule (once, after the first report)
 
-The best rhythm is a weekly radar on Monday morning, or a daily short version. If the user's app supports scheduled tasks, offer to set one up: "Run my Earlybird radar for the last 7 days and give me the report." Reports stay in the conversation, or in `reports/YYYY-MM-DD.md` when there is a file system.
+The radar is most useful when it runs on its own. Right after the **first** report, ask one short question:
+
+> Want this every week? I can run it every Monday at 8:00 for the last 7 days, or every weekday morning for the last day.
+
+- If the user says yes and scheduled tasks are available in this app, create the task with a complete, standalone prompt, for example: "Run my Earlybird radar for the last 7 days using radar-profile.json and give me the report." Use the user's time zone, and the time and days they pick.
+- If scheduled tasks are not available, say so in one line and tell them they can just say "run my radar" any time.
+- If the user says no, do not offer again in this conversation. Do not offer again in later conversations if a schedule already exists.
+
+Reports stay in the conversation, or in `reports/YYYY-MM-DD.md` when there is a file system.
