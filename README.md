@@ -6,8 +6,8 @@ It runs inside the AI assistant you already use: Claude, ChatGPT, Codex or any t
 
 ## What you get
 
-- A weekly (or daily) report of new leads that match your ICP, one table per offer
-- The 3 leads to contact first, with a first line based on the real signal
+- A weekly (or daily) report with every new lead that matches your ICP, one table per offer, ranked by score. No fixed number: a quiet week may bring 5 leads, a busy one 50
+- A "Contact first" list with every lead that is ready to contact now (strong fit plus a real buying signal), each with a suggested first line based on that signal
 - People on Hacker News who mention your competitors or describe the problem you solve
 - Free public sources only: Hacker News, HN "Who is hiring", Y Combinator, GitHub, SEC Form D, UK Companies House, plus web search for Product Hunt, Reddit and funding news
 

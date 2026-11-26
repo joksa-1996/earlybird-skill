@@ -555,10 +555,11 @@ def cmd_collect(a):
     companies = [c for c in companies if c["best_score"] >= a.min_score]
     companies.sort(key=lambda c: c["best_score"], reverse=True)
     out = {"generated_at": now.isoformat(), "days": a.days, "source_status": status,
-           "companies": companies[: a.limit]}
+           "companies": companies[: a.limit] if a.limit > 0 else companies}
     with open(a.out, "w") as f:
         json.dump(out, f, indent=1, default=str)
-    print(f"{len(companies)} companies scored, top {min(a.limit, len(companies))} written to {a.out}", file=sys.stderr)
+    written = min(a.limit, len(companies)) if a.limit > 0 else len(companies)
+    print(f"{len(companies)} companies scored, {written} written to {a.out}", file=sys.stderr)
 
 
 # ----------------------------------------------------------------------------- enrichment
@@ -608,7 +609,7 @@ def main():
     c.add_argument("--days", type=int, default=7)
     c.add_argument("--sources", help="comma list: " + ",".join(SOURCES))
     c.add_argument("--min-score", type=float, default=1.0)
-    c.add_argument("--limit", type=int, default=60)
+    c.add_argument("--limit", type=int, default=0, help="max companies to write; 0 = all (default)")
     c.add_argument("--out", default="signals.json")
     j = sub.add_parser("jobs")
     j.add_argument("--company", required=True, help="company slug or domain")

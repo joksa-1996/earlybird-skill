@@ -31,9 +31,11 @@ python scripts/collect.py collect --profile radar-profile.json --days 7 --out si
 
 **Fallback: web search.** If you cannot run code, or the network blocks a source, cover each missing source with the searches in `references/sources.md`. Keep the same signal kinds (launch, funding, accelerator, sales_hiring, intent) so scoring stays consistent.
 
-## 3. Check the top candidates
+## 3. Check the candidates
 
-For the top 15 to 20 companies by `best_score` (or by your judgment in fallback mode):
+Check **every new company** in `signals.json` (the script already drops noise below `--min-score`), in order of `best_score`. There is no fixed number: a quiet week may have 5 candidates, a busy one 80. In fallback mode, check every company your searches found.
+
+To keep a long list manageable: open the website and job boards for companies with a direct need or a startup signal (launch, funding, accelerator, sales hiring). Companies with only weak signals (incorporation, repo traction, non-sales hiring) can be judged from their description; open the site only if the description is unclear.
 
 1. Open the website: `python scripts/collect.py site --url <website>`, or fetch the page. Look for "Book a demo", pricing, B2B or B2C language.
 2. Check open roles: `python scripts/collect.py jobs --company <slug-or-domain>` (Greenhouse, Lever, Ashby). Open sales roles = budget for sales; many sales roles = they already have a sales team.
@@ -50,8 +52,8 @@ Assign each lead **one** offer: the offer with the highest final score. A person
 Use the format in `references/report.md`, in the user's language. In short:
 
 - One sentence on what changed since the last run.
-- A table per offer: company, what they do, country, date of the strongest signal, final score, why now (1 line), source link.
-- The 3 leads to contact first, each with a suggested first line based on its signal.
+- A table per offer with **every lead that fits** (fit 5 or more after the hard filters): company, what they do, country, date of the strongest signal, final score, why now (1 line), source link. No row limit.
+- **Contact first:** every lead that is ready to contact now (definition in `references/scoring.md`), each with a suggested first line based on its signal. As many as qualify: none, one or twenty. If none qualify, say so in one line.
 - Sources that failed or were skipped, in one line.
 
 Rules:

@@ -19,11 +19,21 @@ Fit is 0 to 10 per offer: how well the company matches the profile's `icp` and t
 
 Then apply the hard filters from the profile (`countries`, `company_size_max`, `exclude`). Drop what fails, and say how many were dropped.
 
+## Which leads make the report
+
+- **In the table:** every lead that passes the hard filters and has fit 5 or more for its offer. No row limit. Leads with fit below 5 are only counted in the footer.
+- **Contact first:** every lead with fit 7 or more **and** at least one of:
+  - a direct need: mentions a competitor, describes the pain, or posts a first sales role or other sales role;
+  - a startup signal (launch, funding, accelerator) from the last 14 days;
+  - a startup signal confirmed by 2 or more independent sources.
+
+  Leads marked "seen" in an earlier run go into Contact first only if they have a new signal since then. The number is whatever qualifies; never pad the list with weaker leads and never cut qualifying ones.
+
 ## Fallback mode (no script)
 
 Score by hand with the same logic:
 
-- **Tier A:** a person or company with a direct need (mentions a competitor, asks about the problem, posts a first sales role) and fit 7 or more.
+- **Tier A:** a person or company with a direct need (mentions a competitor, asks about the problem, posts a first sales role) and fit 7 or more. Tier A leads plus new startups with fit 7 or more go into Contact first.
 - **Tier B:** a new startup signal (launch, round, YC) from 2 or more sources, or a direct need with fit 5 or 6.
 - **Tier C:** everything else that passes the hard filters.
 
